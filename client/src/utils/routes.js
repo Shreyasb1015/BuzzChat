@@ -1,4 +1,4 @@
-const server= "https://buzz-chat-backend.vercel.app/api/v1";
+const server= "https://buzzchat-backend.onrender.com/api/v1";
 
 export const loginRoute = `${server}/users/login`;
 export const registerRoute = `${server}/users/register`;
