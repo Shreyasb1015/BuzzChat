@@ -9,7 +9,7 @@ import Message from '../message/Message';
 import group from '../../assets/group.jpg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { addMessage } from '../../store/slices/messageslice';
+import { addMessage,removeMessage } from '../../store/slices/messageslice';
 import Picker from 'emoji-picker-react';
 import { setLastMessage } from '../../store/slices/conversationslice';
 import { useNavigate } from 'react-router-dom';
@@ -146,6 +146,8 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
       }
       else{
 
+        //dispatch(fetchMessages(conversationId));
+        dispatch(removeMessage(messageId));
         toast.success('Message deleted successfully', toastOptions);
       }
       

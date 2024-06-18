@@ -47,6 +47,10 @@ const messageSlice=createSlice({
         },
         addMessage: (state, action) => {
             state.messages.push(action.payload);
+        },
+        removeMessage(state, action) {
+            const messageId = action.payload;
+            state.messages = state.messages.filter(msg => msg._id !== messageId);
         }
 
     },
@@ -71,5 +75,5 @@ const messageSlice=createSlice({
     }
 })
 
-export const {markAsRead,addMessage}=messageSlice.actions;
+export const {markAsRead,addMessage,removeMessage}=messageSlice.actions;
 export default messageSlice.reducer;
