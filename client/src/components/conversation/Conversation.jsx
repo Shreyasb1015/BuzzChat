@@ -78,7 +78,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
     
   }, [dispatch, conversationId]);
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async() => {
     if (newMessage === '') {
       toast.error('Message cannot be empty', toastOptions);
       return;
@@ -86,8 +86,8 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
     if (newMessage.trim()) {
       const message = { conversationId, content: newMessage, sender: user, createdAt: new Date().toISOString() };
       socket.emit('message', message);
-      dispatch(sendMessage({ conversationId, content: newMessage }));
-      dispatch(addMessage({conversationId:conversation._id,sender:user,content:newMessage,createdAt:new Date().toISOString()}));
+      const sentMessage= await dispatch(sendMessage({ conversationId, content: newMessage }));
+      dispatch(addMessage({messageId:sentMessage._id,conversationId:conversation._id,sender:user,content:newMessage,createdAt:new Date().toISOString()}));
 
       setNewMessage('');
       setEmojiPickerVisible(false);
