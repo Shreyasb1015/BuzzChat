@@ -57,7 +57,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
     socket.on('message',(message)=>{
       if(message.conversationId===conversationId)
       {
-        dispatch(addMessage({conversationId:conversation._id,sender:message.sender,content:message.content,createdAt:message.createdAt}));
+        dispatch(addMessage({messageId:message._id,conversationId:conversation._id,sender:message.sender,content:message.content,createdAt:message.createdAt}));
       }
     })
 
