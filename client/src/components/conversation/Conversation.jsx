@@ -57,7 +57,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
     socket.on('message',(message)=>{
       if(message.conversationId===conversationId)
       {
-        dispatch(addMessage({messageId:message._id,conversationId:conversation._id,sender:message.sender,content:message.content,createdAt:message.createdAt}));
+        dispatch(addMessage({conversationId:conversation._id,sender:message.sender,content:message.content,createdAt:message.createdAt}));
       }
     })
 
@@ -78,7 +78,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
     
   }, [dispatch, conversationId]);
 
-  const handleSendMessage = async() => {
+  const handleSendMessage = () => {
     if (newMessage === '') {
       toast.error('Message cannot be empty', toastOptions);
       return;
@@ -86,8 +86,8 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
     if (newMessage.trim()) {
       const message = { conversationId, content: newMessage, sender: user, createdAt: new Date().toISOString() };
       socket.emit('message', message);
-      const sentMessage= await dispatch(sendMessage({ conversationId, content: newMessage }));
-      dispatch(addMessage({messageId:sentMessage._id,conversationId:conversation._id,sender:user,content:newMessage,createdAt:new Date().toISOString()}));
+      dispatch(sendMessage({ conversationId, content: newMessage }));
+      dispatch(addMessage({conversationId:conversation._id,sender:user,content:newMessage,createdAt:new Date().toISOString()}));
 
       setNewMessage('');
       setEmojiPickerVisible(false);
@@ -192,7 +192,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
             conversation.isGroup
               ? group
               : conversation.members.find(member => member._id !== user._id)?.profilePicture
-                ? `https://buzzchat-backend.onrender.com${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
+                ? `https://buzz-chat-backend.vercel.app${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
                 : ''
           }
           alt="Profile"
