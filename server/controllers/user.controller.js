@@ -37,7 +37,7 @@ const generateAccessTokenAndRefreshToken=async(id)=>{
 }
 
 const generateRandomProfilePicture = () => {
-    const profilePicturesFolder = path.join(__dirname, 'public/profile-pictures'); 
+    const profilePicturesFolder = path.join(__dirname, '..', 'public', 'profile-pictures'); 
     console.log(`Profile pictures folder path: ${profilePicturesFolder}`);
     if (!fs.existsSync(profilePicturesFolder)) {
         throw new Error("Profile pictures folder does not exist");
