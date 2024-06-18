@@ -144,7 +144,7 @@ const Sidebar = ({ onConversationClick }) => {
         <div className="filtered-users">
           {filteredUsers.map((user) => (
             <div key={user._id} className="filtered-user" onClick={()=>{handleCreateConvo(user)}}>
-              <img src={`https://buzz-chat-backend.vercel.app${user.profilePicture}`} alt="User Profile" className="user-profile-pic" />
+              <img src={`https://buzzchat-backend.onrender.com${user.profilePicture}`} alt="User Profile" className="user-profile-pic" />
               <span className="user-username">{user.username}</span>
             </div>
           ))}
@@ -169,7 +169,7 @@ const Sidebar = ({ onConversationClick }) => {
                     conversation.isGroup
                       ? group
                       : conversation.members.find(member => member._id !== user._id)?.profilePicture
-                        ? `https://buzz-chat-backend.vercel.app${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
+                        ? `https://buzzchat-backend.onrender.com${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
                         : ''
                   }
                   alt="Profile"

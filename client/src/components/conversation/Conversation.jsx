@@ -192,7 +192,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
             conversation.isGroup
               ? group
               : conversation.members.find(member => member._id !== user._id)?.profilePicture
-                ? `https://buzz-chat-backend.vercel.app${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
+                ? `https://buzzchat-backend.onrender.com${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
                 : ''
           }
           alt="Profile"

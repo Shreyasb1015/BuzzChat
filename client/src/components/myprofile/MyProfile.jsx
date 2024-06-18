@@ -32,7 +32,7 @@ const MyProfile = () => {
     if (!user || !user.profilePicture) {
         return <div>Loading...</div>; 
       }
-    const profilePicture=`https://buzz-chat-backend.vercel.app${user?.profilePicture}`
+    const profilePicture=`https://buzzchat-backend.onrender.com${user?.profilePicture}`
   
   
 

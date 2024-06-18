@@ -136,7 +136,7 @@ const CreateGroup = () => {
                   className={`group-user-item ${selectedUsers.includes(user._id) ? 'selected' : ''}`}
                   onClick={() => handleUserSelection(user._id, user.username)}
                 >
-                  <img src={`https://buzz-chat-backend.vercel.app${user.profilePicture}`} alt="User Profile" className="group-profile-picture" />
+                  <img src={`https://buzzchat-backend.onrender.com${user.profilePicture}`} alt="User Profile" className="group-profile-picture" />
                   <span className='group-user-selectname'>{user.username}</span>
                   {selectedUsers.includes(user._id) ? <FaUserMinus className="group-remove-icon" /> : <FaUserPlus className="group-add-icon" />}
                 </li>
