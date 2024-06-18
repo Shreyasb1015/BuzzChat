@@ -32,20 +32,19 @@ const generateAccessTokenAndRefreshToken=async(id)=>{
 }
 
 const generateRandomProfilePicture = () => {
-    const profilePicturesFolder = path.join(process.cwd(), 'tmp'); 
+    const profilePicturesFolder = path.join(__dirname, 'public/profile-pictures'); 
     if (!fs.existsSync(profilePicturesFolder)) {
-        throw new ApiError(500, "Profile pictures folder does not exist");
+        throw new Error("Profile pictures folder does not exist");
     }
 
     const files = fs.readdirSync(profilePicturesFolder);
     if (files.length === 0) {
-        throw new ApiError(500, "No profile pictures available");
+        throw new Error("No profile pictures available");
     }
 
     const randomIndex = Math.floor(Math.random() * files.length);
     return `/profile-pictures/${files[randomIndex]}`;
 };
-
 const registerUser=asyncHandler(async(req,res)=>{
 
     const {username,email,password}=req.body;
