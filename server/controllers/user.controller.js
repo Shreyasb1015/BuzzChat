@@ -4,7 +4,6 @@ import {ApiError} from '../utils/ApiError.js'
 import {User} from '../models/user.models.js'
 import fs from 'fs'
 import path from 'path'
-import path from 'path';
 import { fileURLToPath } from 'url';
 
 
