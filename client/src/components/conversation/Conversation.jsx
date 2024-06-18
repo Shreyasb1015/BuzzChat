@@ -164,9 +164,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
       {
          toast.error(response.data.message, toastOptions);
       }
-      dispatch(fetchMessages(conversationId));
-      toast.success('Message updated successfully', toastOptions);
-      
+      dispatch(fetchMessages(conversationId));    
     } catch (error) {
       
        toast.error('Error updating message', toastOptions);
@@ -192,7 +190,7 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
             conversation.isGroup
               ? group
               : conversation.members.find(member => member._id !== user._id)?.profilePicture
-                ? `https://buzz-chat-backend.vercel.app${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
+                ? `https://buzzchat-backend.onrender.com${conversation.members.find(member => member._id !== user._id)?.profilePicture}`
                 : ''
           }
           alt="Profile"
