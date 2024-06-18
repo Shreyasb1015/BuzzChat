@@ -146,7 +146,6 @@ const Conversation = ({ conversationId,handleToggleSidebar,setSelectedConversati
       }
       else{
 
-        dispatch(fetchMessages(conversationId));
         toast.success('Message deleted successfully', toastOptions);
       }
       
