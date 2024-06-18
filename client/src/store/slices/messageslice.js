@@ -3,7 +3,7 @@ import axios from "axios";
 import { getmessageByconversationIdRoute } from "../../utils/routes";
 import { sendMessageRoute } from "../../utils/routes";
 import { fetchConversations } from "./conversationslice";
-
+import { useDispatch } from "react-redux";
 
 
 
@@ -18,6 +18,8 @@ export const sendMessage=createAsyncThunk('messages/sendMessage',async({conversa
 
     try {
         const response= await axios.post(sendMessageRoute.replace(":conversationId",conversationId),{content},{withCredentials:true});
+        const dispatch=useDispatch();
+        dispatch(fetchConversations());
         return response.data.data.message;
     } catch (error) {
         return rejectWithValue(error.response.data);
