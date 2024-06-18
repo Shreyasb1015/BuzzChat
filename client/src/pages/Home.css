@@ -1,0 +1,45 @@
+.home-container {
+  display: flex;
+  height: 100vh;
+}
+
+.no-conversation {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background-color: var(--background-color);
+  color: white;
+}
+
+.conversation-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .show-sidebar .sidebar {
+    width: 94%;
+  }
+
+  .hide-sidebar .sidebar {
+    display: none;
+  }
+
+  .conversation-container {
+    flex-grow: 1;
+    margin:0;
+  }
+  .emojipick{
+
+    position: absolute;
+    bottom:4px;
+    left:4px;
+  }
+}

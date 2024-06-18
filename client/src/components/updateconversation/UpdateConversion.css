@@ -1,0 +1,87 @@
+.update-conversation-container {
+    padding: 20px;
+    margin: auto;
+    max-width: 600px;
+    border:3px solid var(--primary-color);
+    margin-top:60px;
+    color:white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px white;
+  }
+  
+  .update-conversation-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .update-conversation-input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .update-conversation-btn {
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.update-conversation-btn:hover {
+    background-color: darkgreen;
+  }
+
+  
+.update-group-user-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap; 
+  }
+  
+  .update-group-user-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex: 0 0 calc(33.33% - 10px); 
+    
+  }
+  
+  .update-group-user-item:hover {
+    background-color: #f0f0f0;
+    color:var(--background-color);
+  }
+  
+  .selected {
+    background-color: var(--background-color);
+  }
+  
+  .update-group-profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .update-group-add-icon,
+  .update-group-remove-icon,
+  .update-group-undo-selection {
+    margin-left: auto;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    
+  }
+  
+  @media screen and (max-width: 768px){
+    
+    .update-conversation-container{
+        padding: 10px;
+        margin-top:40px;
+    }
+  }

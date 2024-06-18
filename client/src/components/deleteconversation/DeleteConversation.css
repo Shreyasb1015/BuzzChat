@@ -1,0 +1,72 @@
+.delete-conversation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+    margin-top:60px;
+    color:white;
+    border:3px solid var(--primary-color);
+    border-radius: 10px ;
+  }
+  
+  .delete-conversation-left {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .delete-conversation-buttons {
+    margin-top: 20px;
+  }
+  
+  .delete-conversation-btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .yes-btn {
+    background-color: red;
+    color: white;
+  }
+  
+  .no-btn {
+    background-color: green;
+    color: white;
+  }
+  
+  .delete-conversation-right {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .delete-conversation-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .delete-conversation-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .delete-conversation-left, 
+    .delete-conversation-right {
+      flex: unset;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .delete-conversation-btn {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  

@@ -1,0 +1,94 @@
+.update-profile {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-form-container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 3px solid white;
+    box-shadow: 0 4px 26px var(--primary-color);
+    border-radius: 8px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    max-width: 400px; 
+  }
+  
+  .username-label {
+    margin-right: 10px;
+  }
+  
+  .username-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%; 
+  }
+  
+  .email-label {
+    margin-right: 10px;
+  }
+  
+  .email-input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%; 
+  }
+  
+  .save-button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 70px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 260px;
+    width: 100%; 
+  }
+  .save-button:hover{
+ 
+    background-color: var(--secondary-color);
+    color:white;
+  }
+  .picon {
+    margin-right: 5px;
+    color:white;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .profile-form-container {
+      padding: 25px;
+    }
+  
+    .username-input,
+    .email-input {
+      padding: 6px;
+    }
+  
+    .save-button {
+      padding: 8px;
+      max-width: 150px;
+    }
+  }

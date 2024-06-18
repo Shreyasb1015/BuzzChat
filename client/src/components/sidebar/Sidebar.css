@@ -1,0 +1,218 @@
+:root {
+  --background-color: #000000;
+  
+}
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.sidebar-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainlogo {
+  height: 70px;
+  margin-left: 4px;
+}
+
+.profile-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.profile-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.sidebar-search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: white;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  color: var(--primary-color);
+}
+
+.group-chat-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.group-chat-button:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.conversations {
+  width: 100%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.groupdiv{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 5px solid white;
+  margin-bottom: 10px;
+  width: 100%;
+  
+}
+
+.conversation-item {
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.conversation-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.start-chat {
+  text-align: center;
+  color: white;
+}
+
+.conversation-profile {
+  display: flex;
+  align-items: center;
+}
+
+.h-profile-image {
+  width: 32px; 
+  height: 32px; 
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top:4px;
+  margin-bottom: 15px;
+}
+
+.h-profile-info {
+  flex-grow: 1;
+}
+
+.h-username {
+  font-weight: bold;
+  margin-bottom: 10px;
+
+}
+
+.last-message {
+  font-size: 14px;
+  color: #ccc;
+}
+.timestamp {
+  position: absolute; 
+  top: 5px; 
+  right: 5px; 
+  color: white;
+  font-size: 12px; 
+}
+
+.filtered-users {
+  margin-top: 10px;
+}
+
+.filtered-user {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  border-bottom: 1px solid var(--secondary-color);
+  cursor: pointer;
+}
+
+.user-profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-username {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 93%;
+    height: auto;
+    padding: 10px;
+    margin-top:3px;
+  }
+
+  .sidebar-header {
+    margin-bottom: 10px;
+  }
+
+  .search-input, .group-chat-button {
+    margin-bottom: 10px;
+     width:93%;
+  }
+  .search-icon{
+      right:32px;
+      top:10px;
+  }
+  .groupdiv{
+
+    margin-bottom: 13px;
+  }
+  .filtered-user {
+    padding: 6px;
+  }
+
+  .user-profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  .user-username {
+    font-size: 14px;
+  }
+
+}
+

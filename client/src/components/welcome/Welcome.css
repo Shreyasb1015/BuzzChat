@@ -1,0 +1,52 @@
+.buzzchat-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    color: var(--primary-color);
+    background-color: black;
+    text-align: center;
+  }
+  
+  .buzzchat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 100px;
+    margin-left: 100px;
+  }
+  
+  .icon-and-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon {
+    margin-bottom: 20px;
+  }
+  
+  .buzzchat-title {
+    font-size: 4rem; 
+    margin: 0;
+    color: var(--primary-color);
+  }
+  
+  .comments-icon {
+    color: var(--primary-color);
+  }
+  
+  .buzzchat-subtitle {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: var(--primary-color);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .buzzchat-container {
+      margin-right: 8px;
+      margin-left: 0;
+    }
+  }
+  
