@@ -2,6 +2,9 @@
 # BuzzChat
 
 BuzzChat is a real-time chat app built with MERN and Socket.io, allowing users to chat individually or in groups.Users can update, delete messages, and add emojis for a lively chat environment. Its responsive design makes it accessible on any device, ensuring a seamless communication experience. 
+
+Demo Video Link:https://www.youtube.com/watch?v=As150kq2QZI
+
 ## Features
 
 - It uses Socket.io for instant messaging, ensuring conversations happen in real-time.
